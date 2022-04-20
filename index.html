@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./src/css/custom.css">
+    
+    <link rel="shortcut icon" href="./src/images/fav.png" type="image/png">
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet"> 
+
+    <title>Hangman Game</title>
+</head>
+<body class="bg-light">
+
+    
+    <div class="container border border-secondary mt-5 p-1 rounded d-flex flex-column align-items-center justify-content-center">
+        <h3 class="bg-secondary text-center text-light p-3 border rounded w-100">Hangman Game</h3>
+        <hr/>    
+        <div class="border border-secondary w-50 p-3 text-center rounded secWord">
+            
+        </div>
+        <hr>
+        <div class="border border-secondary w-50 p-3 text-center rounded">
+            Letter History: <span class="letterHistory text-warning"></span> 
+        </div>
+        <hr>
+        <div class="border border-secondary w-50 p-3 text-center rounded d-flex justify-content-center align-items-center">
+            <div class="border border-secondary w-50 p-2 text-center rounded">
+                Wins: <span class="wins text-success"></span>
+            </div>
+
+            <div class="border border-secondary w-50 p-2 text-center rounded mx-3">
+                Loses: <span class="loses text-danger"></span>
+            </div>
+            <div class="border border-secondary w-50 p-2 text-center rounded">
+                Choices: <span class="choices text-primary"></span>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container my-2 d-flex justify-content-center align-items-center loseGif">
+        <img src="" class="rounded" style="width: 30%;" alt="suicide image">
+    </div>
+
+    <div class="howToPlayBtn btn btn-info" onclick="document.querySelector('.howToPlayContent').style.display = 'block'">
+        How To Play ?
+    </div>
+
+    <div class="howToPlayContent alert alert-warning">
+        <div class="closeContent" onclick="document.querySelector('.howToPlayContent').style.display = 'none'" >&times;</div>
+        This game is same as <mark>Psychic-game</mark>
+        <br/>
+        But have a difference Psychic-game playing with one <mark>letter</mark>, Hangman-game playing with one <mark>word</mark>
+        <br/>
+        Find the secret word!
+        <br/>
+        Good Luck :)
+    </div>
+    <!-- Javascript -->
+    <script src="./src/js/game.js"></script>
+</body>
+</html>
